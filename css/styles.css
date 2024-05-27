@@ -1,0 +1,327 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ff4500;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.sobre-nosotros {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-nosotros p {
+  color: #333;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.redes a {
+  margin-right: 10px;
+}
+
+.redes img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.redes img:hover {
+  transform: scale(1.1);
+}
+
+#mapa {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#mapa iframe {
+  border: 5px solid #ff4500;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+#proyecto {
+  margin-top: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: #ff4500;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #e63900;
+}
+
+.boleta {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.boleta h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff4500;
+}
+
+.boleta table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.boleta table, .boleta th, .boleta td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.boleta th {
+  background-color: #ff4500;
+  color: white;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .servicios-container, .contacto-container {
+      flex-direction: column;
+  }
+
+  header nav ul li {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  header nav ul li a {
+      display: block;
+      padding: 10px;
+      text-align: center;
+  }
+
+  #mapa iframe {
+      width: 100%;
+      height: auto;
+  }
+
+  .boleta {
+      max-width: 100%;
+  }
+}
+/* Añadir nuevas clases y estilos */
+
+/* Centrar las secciones */
+.section-centered {
+  text-align: center;
+}
+
+/* Estilos compactos para servicios y contacto */
+.servicios-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.servicio, .contacto-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.redes a {
+  display: inline-block;
+}
+
+.redes img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.redes img:hover {
+  transform: scale(1.1);
+}
+
+/* Ajustes de diseño responsivo */
+@media (max-width: 768px) {
+  .servicios-container, .contacto-container {
+      flex-direction: column;
+  }
+}
+/* Añadir animaciones o movimientos */
+
+/* Agregar transiciones para los inputs del formulario */
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, transform 0.3s; /* Añadimos transición para el color del borde y el tamaño */
+}
+
+form input:focus {
+  border-color: #ff4500;
+  transform: scale(1.05); /* Al enfocar un input, lo aumentamos de tamaño */
+}
+
+/* Agregar transición para el botón del formulario */
+form button {
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Añadimos transición para el color de fondo y el tamaño */
+}
+
+form button:hover {
+  background-color: #e63900;
+  transform: scale(1.05); /* Al pasar el mouse sobre el botón, lo aumentamos de tamaño */
+}
+/* Cambiar el color de fondo a verde cian */
+body {
+  background-color: #7FFFD4; /* Verde cian */
+}
+
+/* Asegurar que los estilos de texto y los cuadros no se vean afectados */
+.sobre-nosotros,
+.servicios-container,
+.contacto-container,
+.boleta {
+  background-color: white; /* Fondo blanco para los cuadros de información */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.hero {
+  position: relative;
+  height: 400px; /* Ajusta la altura según tu preferencia */
+  background-image: url('https://jumpseller.cl/generated/images/learn/others/invoice-800-acec6c529.png'); /* Ruta relativa de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; /* Color de texto blanco para contrastar con la imagen */
+}

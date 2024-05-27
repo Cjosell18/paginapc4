@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleta Electrónica</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#proyecto">Proyecto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <div class="hero">
+                <h1 class="titulo-grande">Boleta Electrónica</h1>
+                <h2 class="subtitulo">Proyecto Algoritmos</h2>
+            </div>
+        </section>
+        <section id="nosotros" class="section-centered">
+            <h2>Sobre Nosotros</h2>
+            <div class="sobre-nosotros">
+                <p>Bienvenidos al servicio de emisión de boletas electrónicas. Nuestro objetivo es facilitar el proceso de generación y gestión de boletas electrónicas para empresas y profesionales independientes. Ofrecemos una plataforma segura y eficiente para emitir, almacenar y consultar boletas electrónicas en línea. Con nuestra tecnología, puedes automatizar el proceso de creación de boletas, reducir errores administrativos y asegurar el cumplimiento con las normativas fiscales. Si necesitas asistencia, nuestro equipo de soporte está aquí para ayudarte en cada paso.</p>
+            </div>
+        </section>
+        <section id="servicios" class="section-centered">
+            <h2>Servicios</h2>
+            <div class="servicios-container">
+                <div class="servicio">
+                    <h3>1. Servicio de generación automática de boletas electrónicas</h3>
+                    <p>Este servicio automatiza el proceso de creación de boletas electrónicas a partir de datos de ventas o facturas existentes.</p>
+                </div>
+                <div class="servicio">
+                    <h3>2. Servicio de portal web y aplicación móvil para la gestión de boletas electrónicas</h3>
+                    <p>Este servicio proporciona un portal web y una aplicación móvil para que los usuarios puedan gestionar sus boletas electrónicas de forma fácil y cómoda.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contacto" class="section-centered">
+            <h2>Contacto</h2>
+            <div class="contacto-container">
+                <div class="contacto-item">
+                    <p>UBICACIÓN: A.V Municipal</p>
+                </div>
+                <div class="contacto-item">
+                    <p>NUESTRAS REDES:</p>
+                    <div class="redes">
+                        <a href="https://www.facebook.com/login"><img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.tiktok.com/login"><img src="https://img.icons8.com/color/48/000000/tiktok.png" alt="TikTok"></a>
+                        <a href="https://www.youtube.com/"><img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="contacto-item">
+                    <p>CORREO ELECTRÓNICO: boleta2024electronica@hotmail.com</p>
+                </div>
+                <div class="contacto-item">
+                    <p>TELÉFONO CEL: 920006773</p>
+                </div>
+            </div>
+            <div id="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.227898354561!2d-75.732251025693!3d-14.063715486361401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e2be6ec33b3b%3A0xf931e27e8358c9a0!2sAv.%20Municipalidad%2C%20Ica%2011001!5e0!3m2!1ses-419!2spe!4v1716670642588!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section id="proyecto">
+            <h2>Proyecto</h2>
+            <form id="formularioBoleta">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <label for="producto">Producto:</label>
+                <input type="text" id="producto" name="producto" required>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+                <label for="precio">Precio:</label>
+                <input type="number" step="0.01" id="precio" name="precio" required>
+                <button type="submit">Generar Boleta</button>
+            </form>
+            <div class="boleta" id="boleta">
+                <h3>Boleta Electrónica</h3>
+                <table>
+                    <tr>
+                        <td><strong>Número de Boleta:</strong></td>
+                        <td><span id="numeroBoleta"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fecha de Emisión:</strong></td>
+                        <td><span id="fechaEmision"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nombre:</strong></td>
+                        <td><span id="boletaNombre"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Producto:</strong></td>
+                        <td><span id="boletaProducto"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cantidad:</strong></td>
+                        <td><span id="boletaCantidad"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Precio Unitario:</strong></td>
+                        <td>$<span id="boletaPrecio"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total:</strong></td>
+                        <td>$<span id="boletaTotal"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Descuentos:</strong></td>
+                        <td>$<span id="boletaDescuentos"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Impuestos:</strong></td>
+                        <td>$<span id="boletaImpuestos"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total a Pagar:</strong></td>
+                        <td>$<span id="boletaTotalPagar"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Boleta Electrónica. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>
